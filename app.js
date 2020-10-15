@@ -8,7 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+let appInsights = require("applicationinsights");
+appInsights.setup("[d1e618a2-9b6a-45c6-8cc2-8b04d8b69f0b]").start();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
